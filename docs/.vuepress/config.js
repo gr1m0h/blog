@@ -33,5 +33,10 @@ module.exports = {
 			}
     	],
 		footer: '',
-  	}
+  	},
+	markdown: {
+		config: md => {
+			md.use(require('markdown-it-footnote'));
+		}
+	}
 }

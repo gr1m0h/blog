@@ -36,6 +36,7 @@ module.exports = {
   	},
 	markdown: {
 		config: md => {
+			md.options.linkify = true
 			md.use(require('markdown-it-footnote'));
 		}
 	}

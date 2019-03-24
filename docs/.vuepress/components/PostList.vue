@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-for="post in posts">
-            <h2><a v-bind:href="post.path">{{post.title}}</a></h2>
+            <h2><a v-bind:href="post.path">{{post.frontmatter.title}}</a></h2>
             <p>{{post.frontmatter.description}}</p>
         </div>
     </div>
@@ -9,11 +9,9 @@
 <script>
 export default {
     computed: {
-        posts() {
+		posts() {
             return this.$site.pages
-                // blogディレクトリ以下を投稿記事一覧表示の対象とする
-                .filter(post => post.path.startsWith('/blog/'))
-                // dateに設定した日付の降順にソートする
+                .filter(post => post.path.startsWith('/articles/'))
                 .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
         }
     }

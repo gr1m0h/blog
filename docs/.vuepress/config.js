@@ -3,6 +3,7 @@ module.exports = {
 	title: 'Grimoh',
 	description: ' ',
 	serviceWorker: true,
+	ga: 'UA-137907582-1',
 	locales: {
 		'/': {
 			lang: 'ja'

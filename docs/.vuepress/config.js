@@ -20,8 +20,8 @@ module.exports = {
 		lastUpdated: 'Last Updated',
 		serviceWorker: {
       		updatePopup: {
-        		message   : "新しいコンテンツが追加されました。",
-        		buttonText: "更新",
+        		message   : "New content has been added.",
+        		buttonText: "Update",
       		}
     	},
     	nav: [

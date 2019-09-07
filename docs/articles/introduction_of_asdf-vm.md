@@ -1,5 +1,5 @@
 ---
-title: Version control using asdf-vm
+title: asdf-vm を使用したバーション管理
 description: asdf-vm(asdf version manager)を使用したバージョン管理について紹介します
 date: 2019/07/18
 ---

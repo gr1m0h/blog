@@ -1,10 +1,10 @@
 ---
-title: Version control using asdf-vm
+title: asdf-vm を使用したバーション管理
 description: asdf-vm(asdf version manager)を使用したバージョン管理について紹介します
 date: 2019/07/18
 ---
 
-# Version control using asdf-vm
+# asdf-vm を使用したバーション管理
 asdf-vm(以下asdf)は、バージョン管理ツールです。
 
 使い方がシンプルで、いろんな言語に使えるため、重宝しています。また、プラグイン作成が簡単なので、普段自分が使用している言語が無いなと思っても、プラグインを作成、バージョン管理ができてしまいます。

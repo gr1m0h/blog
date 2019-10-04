@@ -29,7 +29,7 @@ module.exports = {
 				text: 'About',
 				items: [
 					{text: 'Twitter', link: 'https://twitter.com/grimoh117'},
-      				{text: 'GitHub', link: 'https://github.com/grimoh117'}
+      				{text: 'GitHub', link: 'https://github.com/grimoh'}
 				]
 			}
     	],

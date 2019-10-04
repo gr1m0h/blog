@@ -28,7 +28,7 @@ module.exports = {
 			{
 				text: 'About',
 				items: [
-					{text: 'Twitter', link: 'https://twitter.com/grimoh117'},
+					{text: 'Twitter', link: 'https://twitter.com/grim0h'},
       				{text: 'GitHub', link: 'https://github.com/grimoh'}
 				]
 			}

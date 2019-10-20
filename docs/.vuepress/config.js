@@ -13,6 +13,9 @@ module.exports = {
 		{ charset: 'utf-8' },
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
 	],
+	header: [
+		['link', { rel: 'icon', type: 'image/png', href: '/img/favicon.png'}]
+	],
 	themeConfig: {
 		search: true,
 		docsDir: 'docs',
@@ -28,8 +31,8 @@ module.exports = {
 			{
 				text: 'About',
 				items: [
-					{text: 'Twitter', link: 'https://twitter.com/grimoh117'},
-      				{text: 'GitHub', link: 'https://github.com/grimoh117'}
+					{text: 'Twitter', link: 'https://twitter.com/grim0h'},
+      				{text: 'GitHub', link: 'https://github.com/grimoh'}
 				]
 			}
     	],

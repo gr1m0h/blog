@@ -1,0 +1,39 @@
+# Site settings
+baseurl = "https://grimoh.com/"
+themesDir = "./themes/"
+languageCode = "ja"
+title = "Grimoh"
+theme = "cactus"
+googleAnalytics = "UA-137907582-1"
+disqusShortname = ""
+
+[params]
+	name = "grimoh"
+	description = ""
+	bio = "Visual-kei SRE"
+
+	twitter = "grim0h"
+	enableRSS = true
+
+	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
+	# linking local files with their path relative to the static folder, e.g. "css/styles.css"
+	customCSS = []
+	customJS  = []
+
+	# Navigation links
+	home = "HOME"
+
+	# Pagination links
+	olderPosts = ""
+	newerPosts = ""
+	readMore = ""
+	copyright = ""
+
+	# Sharing options and author information in posts
+	aboutAuthor = "I'm a visual-kei SRE."
+
+	iconFont = "font-awesome"
+
+[social]
+    twitter  = "https://www.twitter.com/grim0h"
+    github   = "https://www.github.com/grimoh"

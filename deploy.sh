@@ -8,7 +8,7 @@ cd public
 
 git add .
 
-msg="rebuilding site `date`"
+msg="rebuilding site `date +%s`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi

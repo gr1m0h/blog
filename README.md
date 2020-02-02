@@ -1,1 +1,1 @@
-# blog.grimoh.io
+# blog

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grimoh</title>
+    <link>https://grimoh.github.io/</link>
+    <description>Recent content on Grimoh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Mon, 21 Oct 2019 22:03:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://grimoh.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>個人活動におけるスキルマップのすすめ</title>
+      <link>https://grimoh.github.io/post/skillmap/</link>
+      <pubDate>Mon, 21 Oct 2019 22:03:23 +0900</pubDate>
+      
+      <guid>https://grimoh.github.io/post/skillmap/</guid>
+      <description>スキルマップとは スキルマップとは、業務で必要なスキルとそれに対応するチームメンバーのスキルレベルを一覧にした表です。スキルマップによって、一般的には以下の効果が期待できます。
+ 組織内のスキル可視化  スキルが可視化されることによって、組織内にどんなスキルを持った人がいるのか把握できるため、将来的にどんなスキルが不足するか判断でき、スキルの強化、スキルの補填計画が立てやすくなります   メンバー育成  メンバーのスキルが一目瞭然になることにより、どのメンバーにどの能力を身につけてもらいたいか、どのメンバーがそのスキルについて指導できるレベルになるかが把握できるため、育成計画を立てやすくなります   メンバーのモチベーション向上  スキルについてレベル分けされ、自身の足りないスキルについて把握できるため、成長意欲の向上や、モチベーションの向上が期待できます    個人活動でスキルマップを導入すること 今回は組織にスキルマップを導入するのではなく、個人的にスキルマップを作成してみようと思います。個人でスキルマップが必要だと思った理由は以下です。
+ 自身の能力がどの程度か把握できない  所属するチームで求めるスキルに対して、自身の能力はどの程度なのか把握したい   自己学習していくにあたり、どこを伸ばしていけば良いかわからない  自身の足りないスキルを把握して、伸ばしていくスキルを選択しやすくする   自身の能力の整理  自身の能力がどの程度が把握できなかったため、何がどの程度できるのか把握できていなかった レベル付けすることで、自身の能力の整理をする    現在、所属するチームではスキルマップはないのですが、スキルセットの定義はあります。そこで、所属するチームのスキルセットを基に、スキルマップを作成してみます。
+レベルについて レベルの定義は以下の通りです。
+ できない  以下の理由から項目だけ追加しているもの  興味がある/将来伸ばしていきたい 所属チームのスキルセットと比較する     助けがあればできる  他者の補助/支援があればできる 概念の理解はしている程度   1人でできる  ある程度、一般的なレベルまでは実行できる程度 教えられるほどではない   他者をサポートできる  簡単な内容、一般的なことであれば記事に書ける、登壇/セッションが書ける程度   指導できる  チーム内でリードできる  新機能についてのキャッチアップ 周辺ツールのR&amp;amp;D チームとしての方針決定   記事に書ける、登壇/セッションができる程度    スキルマップ 作成したスキルマップのテンプレートは以下です</description>
+    </item>
+    
+    <item>
+      <title>Terraform backend の管理</title>
+      <link>https://grimoh.github.io/post/terraform-backend/</link>
+      <pubDate>Sun, 06 Oct 2019 22:03:23 +0900</pubDate>
+      
+      <guid>https://grimoh.github.io/post/terraform-backend/</guid>
+      <description>Terraform backend について Terraform は、構成要素の状態を保存するために、tfstateファイルを生成します。Terraform では、このtfstateファイルとHCL(*.tf)で記述されたコードの内容に差分があれば、それに応じて、その差分のみを更新するように振る舞います。このtfstateファイルは、バージョン管理システム(e.g. Github)で保存することは良くないとされています。それは、以下の理由からです。
+ tfstateファイルの追従  以下のようなミスよって、期限切れのtfstateファイルで適用してしまう危険性がある  バージョン管理システムへPushし忘れ  local に最新のtfstateファイルを持ったままの状態   2人以上のメンバーが同じtfstateファイルで同時に実行することによる競合  バージョン管理システムの多くは、2人のメンバーが同じtfstateファイルで同時に実行することを防ぐロック(State Locking)を提供していない       秘匿情報  tfstateファイルはプレーンテキストで情報を保持するので、リソースの秘匿情報が記載されてしまう  e.g. DBのパスワード      以上の問題から、backendリソースを使用して、tfstateファイルを外部のストレージに保存します。ここでは、AWSを使用するため、S3(tfstateファイルの保存、暗号化)+DynamoDB(State Locking)をbackendに指定します。S3のバケットはバージョニング設定ができるため、より安全な管理が行えます。Terraform backend の管理 Terraform backend は、terraform init時に必要となります。その為、Terraform で管理するには、AWS上に事前に作成しておき、Terraform にimportする方法が考えられます。また、外部ストレージとなるS3をTerraform で管理しているAWSアカウント上で管理することが考えられますが、公式では推奨していません。1後者については、別のAWSアカウントでTerraform backend を管理することが考えられますが、前者については、Terraform で管理すると、Terraform backend を管理するための Terraform の Terraform backend について考えなければならなくなり、堂々巡りに陥ってしまったので、CloudFormation を使用して管理することにしました。
+grimoh/terraform-backend-setup-scripts
+上記のスクリプトを使用すれば、CloudFormationスタック名、S3バケット名、DynamoDBテーブル名を指定することで、Terraform backend 用のS3、DynamoDBを作成することができます。
+  https://www.terraform.io/docs/backends/types/s3.html &amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+    <item>
+      <title>asdf-vm を使用したバージョン管理</title>
+      <link>https://grimoh.github.io/post/asdf-vm/</link>
+      <pubDate>Thu, 18 Jul 2019 22:03:23 +0900</pubDate>
+      
+      <guid>https://grimoh.github.io/post/asdf-vm/</guid>
+      <description>asdf-vm とは asdf-vm(以下asdf)は、バージョン管理ツールです。
+使い方がシンプルで、いろんな言語に使えるため、重宝しています。また、プラグイン作成が簡単なので、普段自分が使用している言語が無いなと思っても、プラグインを作成、バージョン管理ができてしまいます。
+公式にはこれらの言語をプラグインとしていますが、プラグイン作成ガイドラインに則ってプラグインを作成することで、自分で作ったプラグインを公式のプラグインとして追加してもらうことも可能です。
+個人的にも、負荷試験ツールであるloadimpact/k6のプラグインや、catをシンタックスハイライト出来るようにしたccatのプラグインを作成しています。
+How to use asdf-vm asdf-vmの使い方について簡単に説明します。
+Install asdf-vm まず、asdf-vm自体の導入です。公式の手順1を参照するのが良いでしょう。
+以下は、Bash on macOS の場合です。
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3 echo -e &amp;#39;\n. $HOME/.asdf/asdf.sh&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;\n. $HOME/.asdf/completions/asdf.bash&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile 個人的なdotfilesにもasdf-vmを導入する手順が含まれているので、参考にしてみても良いかもしれません。
+Add plugin ここからは、↑で紹介したloadimpact/k6を例にして紹介します。loadimpact/k6のプラグインを追加します。
+asdf plugin-add k6 https://github.com/grimoh117/asdf-k6.git 公式のプラグインの場合、インストールもとのURLが不要となります。
+Remove plugin loadimpact/k6のプラグインをアンインストールします。
+asdf plugin-remove k6 List all available versions loadimpact/k6のプラグインを使用してインストール可能なバージョンの一覧を表示します。この中から使用するバージョンを選択し、インストールして使用します。
+asdf list-all k6 Install version loadimpact/k6の0.24.0をインストールしてみます。インストールを行ってもパスが通っているわけでは無いので、使用することはできません。
+asdf install k6 0.24.0 Uninstall version loadimpact/k6の0.24.0をアンインストールしてみます。
+asdf uninstall k6 0.</description>
+    </item>
+    
+    <item>
+      <title>First post</title>
+      <link>https://grimoh.github.io/post/first_post/</link>
+      <pubDate>Sun, 24 Mar 2019 22:03:23 +0900</pubDate>
+      
+      <guid>https://grimoh.github.io/post/first_post/</guid>
+      <description>仕事で弊社テックブログに記事を投稿したのがきっかけで、プライベートでもアウトプットしなきゃなという気持ちが高まってきたのでブログを作ってみました。
+環境について 環境はVuePress+Netlifyを使用しています。Hugoでもよかったのですが、仕事でチーム内ドキュメントにVuePressを使用していることや、フロントの知識が少しでも付けばという思いでVuePressを選択しました。トップページの記事一覧は以下のComponentを使用しています。
+ https://github.com/grimoh/vue-articlelist  今後について 場所は出来たので、VuePress周りをカスタマイズしながら、技術に依らずいろいろ書いていければと思います。</description>
+    </item>
+    
+  </channel>
+</rss>

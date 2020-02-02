@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asdf-vm on Grimoh</title>
+    <link>https://grimoh.github.io/tags/asdf-vm/</link>
+    <description>Recent content in asdf-vm on Grimoh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Thu, 18 Jul 2019 22:03:23 +0900</lastBuildDate>
+    
+	<atom:link href="https://grimoh.github.io/tags/asdf-vm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>asdf-vm を使用したバージョン管理</title>
+      <link>https://grimoh.github.io/post/asdf-vm/</link>
+      <pubDate>Thu, 18 Jul 2019 22:03:23 +0900</pubDate>
+      
+      <guid>https://grimoh.github.io/post/asdf-vm/</guid>
+      <description>asdf-vm とは asdf-vm(以下asdf)は、バージョン管理ツールです。
+使い方がシンプルで、いろんな言語に使えるため、重宝しています。また、プラグイン作成が簡単なので、普段自分が使用している言語が無いなと思っても、プラグインを作成、バージョン管理ができてしまいます。
+公式にはこれらの言語をプラグインとしていますが、プラグイン作成ガイドラインに則ってプラグインを作成することで、自分で作ったプラグインを公式のプラグインとして追加してもらうことも可能です。
+個人的にも、負荷試験ツールであるloadimpact/k6のプラグインや、catをシンタックスハイライト出来るようにしたccatのプラグインを作成しています。
+How to use asdf-vm asdf-vmの使い方について簡単に説明します。
+Install asdf-vm まず、asdf-vm自体の導入です。公式の手順1を参照するのが良いでしょう。
+以下は、Bash on macOS の場合です。
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3 echo -e &amp;#39;\n. $HOME/.asdf/asdf.sh&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile echo -e &amp;#39;\n. $HOME/.asdf/completions/asdf.bash&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile 個人的なdotfilesにもasdf-vmを導入する手順が含まれているので、参考にしてみても良いかもしれません。
+Add plugin ここからは、↑で紹介したloadimpact/k6を例にして紹介します。loadimpact/k6のプラグインを追加します。
+asdf plugin-add k6 https://github.com/grimoh117/asdf-k6.git 公式のプラグインの場合、インストールもとのURLが不要となります。
+Remove plugin loadimpact/k6のプラグインをアンインストールします。
+asdf plugin-remove k6 List all available versions loadimpact/k6のプラグインを使用してインストール可能なバージョンの一覧を表示します。この中から使用するバージョンを選択し、インストールして使用します。
+asdf list-all k6 Install version loadimpact/k6の0.24.0をインストールしてみます。インストールを行ってもパスが通っているわけでは無いので、使用することはできません。
+asdf install k6 0.24.0 Uninstall version loadimpact/k6の0.24.0をアンインストールしてみます。
+asdf uninstall k6 0.</description>
+    </item>
+    
+  </channel>
+</rss>

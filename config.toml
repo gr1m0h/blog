@@ -1,9 +1,11 @@
 # Site settings
-baseurl = "https://grimoh.com/"
-themesDir = "./themes/"
-languageCode = "ja"
 title = "Grimoh"
+baseurl = "https://grimoh.github.io"
+canonifyurls = true
+themesDir = "./themes/"
 theme = "cactus"
+publishDir = "docs"
+languageCode = "ja-JP"
 googleAnalytics = "UA-137907582-1"
 disqusShortname = ""
 

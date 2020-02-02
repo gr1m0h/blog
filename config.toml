@@ -1,6 +1,6 @@
 # Site settings
 title = "Grimoh"
-baseurl = "https://blog.grimoh.com/"
+baseurl = "https://grimoh.github.io/"
 canonifyurls = true
 themesDir = "./themes/"
 theme = "hugo-cactus-theme"

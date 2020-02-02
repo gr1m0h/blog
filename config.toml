@@ -1,10 +1,9 @@
 # Site settings
 title = "Grimoh"
-baseurl = "https://grimoh.github.io/blog/"
+baseurl = "https://grimoh.github.io/"
 canonifyurls = true
 themesDir = "./themes/"
 theme = "cactus"
-publishDir = "docs"
 languageCode = "ja-jp"
 paginate = 10
 googleAnalytics = "UA-137907582-1"

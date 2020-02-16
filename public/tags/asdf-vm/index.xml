@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>asdf-vm on Grimoh</title>
-    <link>http://blog.grimoh.com/tags/asdf-vm/</link>
+    <link>https://grimoh.github.io/tags/asdf-vm/</link>
     <description>Recent content in asdf-vm on Grimoh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 18 Jul 2019 22:03:23 +0900</lastBuildDate>
     
-	<atom:link href="http://blog.grimoh.com/tags/asdf-vm/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://grimoh.github.io/tags/asdf-vm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>asdf-vm を使用したバージョン管理</title>
-      <link>http://blog.grimoh.com/post/asdf-vm/</link>
+      <link>https://grimoh.github.io/post/asdf-vm/</link>
       <pubDate>Thu, 18 Jul 2019 22:03:23 +0900</pubDate>
       
-      <guid>http://blog.grimoh.com/post/asdf-vm/</guid>
+      <guid>https://grimoh.github.io/post/asdf-vm/</guid>
       <description>asdf-vm とは asdf-vm(以下asdf)は、バージョン管理ツールです。
 使い方がシンプルで、いろんな言語に使えるため、重宝しています。また、プラグイン作成が簡単なので、普段自分が使用している言語が無いなと思っても、プラグインを作成、バージョン管理ができてしまいます。
 公式にはこれらの言語をプラグインとしていますが、プラグイン作成ガイドラインに則ってプラグインを作成することで、自分で作ったプラグインを公式のプラグインとして追加してもらうことも可能です。

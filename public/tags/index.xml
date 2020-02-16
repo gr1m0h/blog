@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Grimoh</title>
-    <link>http://blog.grimoh.com/tags/</link>
+    <link>https://grimoh.github.io/tags/</link>
     <description>Recent content in Tags on Grimoh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sun, 06 Oct 2019 22:03:23 +0900</lastBuildDate>
     
-	<atom:link href="http://blog.grimoh.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://grimoh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>AWS</title>
-      <link>http://blog.grimoh.com/tags/aws/</link>
+      <link>https://grimoh.github.io/tags/aws/</link>
       <pubDate>Sun, 06 Oct 2019 22:03:23 +0900</pubDate>
       
-      <guid>http://blog.grimoh.com/tags/aws/</guid>
+      <guid>https://grimoh.github.io/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Terraform</title>
-      <link>http://blog.grimoh.com/tags/terraform/</link>
+      <link>https://grimoh.github.io/tags/terraform/</link>
       <pubDate>Sun, 06 Oct 2019 22:03:23 +0900</pubDate>
       
-      <guid>http://blog.grimoh.com/tags/terraform/</guid>
+      <guid>https://grimoh.github.io/tags/terraform/</guid>
       <description></description>
     </item>
     
     <item>
       <title>asdf-vm</title>
-      <link>http://blog.grimoh.com/tags/asdf-vm/</link>
+      <link>https://grimoh.github.io/tags/asdf-vm/</link>
       <pubDate>Thu, 18 Jul 2019 22:03:23 +0900</pubDate>
       
-      <guid>http://blog.grimoh.com/tags/asdf-vm/</guid>
+      <guid>https://grimoh.github.io/tags/asdf-vm/</guid>
       <description></description>
     </item>
     

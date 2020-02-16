@@ -1,10 +1,11 @@
 # Site settings
 title = "Grimoh"
-baseurl = "https://grimoh.github.io/"
+baseurl = "https://blog.grimoh.com/"
 canonifyurls = true
 themesDir = "./themes/"
 theme = "hugo-cactus-theme"
-languageCode = "ja-jp"
+languageCode = "eu-us"
+hasCJKLanguage = true
 paginate = 10
 googleAnalytics = "UA-137907582-1"
 disqusShortname = ""

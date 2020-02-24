@@ -8,7 +8,7 @@ categories: [""]
 draft: false
 ---
 
-![terraform backend](../../images/terraform_backend.png)
+![terraform backend](terraform_backend.png)
 
 ## Terraform backend について
 Terraform は、構成要素の状態を保存するために、tfstateファイルを生成します。<br>

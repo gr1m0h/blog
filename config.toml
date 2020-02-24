@@ -1,6 +1,6 @@
 # Site settings
 title = "Grimoh"
-baseurl = "https://blog.grimoh.com/"
+baseurl = "https://awesome-spence-6edf78.netlify.com/"
 canonifyurls = true
 themesDir = "./themes/"
 theme = "hugo-cactus-theme"

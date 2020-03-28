@@ -1,7 +1,6 @@
 # Site settings
 title = "Grimoh"
 baseurl = "https://blog.grimoh.net/"
-canonifyurls = true
 themesDir = "./themes/"
 theme = "hugo-cactus-theme"
 languageCode = "eu-us"
@@ -16,7 +15,7 @@ disqusShortname = ""
 	bio = "Visual-kei SRE"
 
 	twitter = "grim0h"
-	enableRSS = true
+	enableRSS = false
 
 	# Integrate Javascript files or stylesheets by adding the url to the external assets or by
 	# linking local files with their path relative to the static folder, e.g. "css/styles.css"

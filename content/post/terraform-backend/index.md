@@ -8,8 +8,6 @@ categories: [""]
 draft: false
 ---
 
-![terraform backend](terraform_backend.png)
-
 ## Terraform backend について
 Terraform は、構成要素の状態を保存するために、tfstateファイルを生成します。<br>
 Terraform では、このtfstateファイルとHCL(*.tf)で記述されたコードの内容に差分があれば、それに応じて、その差分のみを更新するように振る舞います。<br>

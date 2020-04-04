@@ -45,7 +45,7 @@ disqusShortname = ""
 	iconFont = "font-awesome"
 
   # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-    socialIconStyle = "circle"
+  socialIconStyle = "circle"
 
 [social]
     twitter  = "https://www.twitter.com/grim0h"

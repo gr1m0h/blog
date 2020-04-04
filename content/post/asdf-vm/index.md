@@ -5,7 +5,7 @@ date: 2019-07-18
 date: 2019-07-18T22:03:23+09:00
 lastmod: 2020-02-01T22:03:23+09:00
 tags: ["asdf-vm"]
-categories: [""]
+categories: ["tech"]
 draft: false
 ---
 

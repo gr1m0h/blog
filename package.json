@@ -4,10 +4,14 @@
     "serve": "hugo server",
     "fix:lint:md": "find ./content -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json --fix {} \\;",
     "check:lint:md": "find ./content -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json {} \\;",
+    "fix:lint:text": "find ./content -type f -name '*.md' -exec npx textlint --fix {} \\;",
+    "check:lint:text": "find ./content -type f -name '*.md' -exec npx textlint {} \\;",
     "check:link": "find ./content -type f -name '*.md' -exec npx markdown-link-check {} \\;"
   },
   "dependencies": {
     "markdownlint": "^0.20.1",
-    "markdownlint-cli": "^0.22.0"
+    "markdownlint-cli": "^0.22.0",
+    "textlint": "^11.6.3",
+    "textlint-rule-preset-ja-technical-writing": "^3.1.3"
   }
 }

@@ -3,7 +3,8 @@
   "scripts": {
     "serve": "hugo server",
     "fix:lint:md": "find . -type d -name node_modules -prune -o -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json --fix {} \\;",
-    "check:lint:md": "find . -type d -name node_modules -prune -o -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json {} \\;"
+    "check:lint:md": "find . -type d -name node_modules -prune -o -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json {} \\;",
+    "check:link": "find . -type d -name node_modules -prune -o -type f -name '*.md' -exec npx markdown-link-check {} \\;"
   },
   "dependencies": {
     "markdownlint": "^0.20.1",

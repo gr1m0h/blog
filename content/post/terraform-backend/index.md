@@ -9,6 +9,7 @@ draft: false
 ---
 
 ## Terraform backend について
+
 Terraform は、構成要素の状態を保存するために、tfstateファイルを生成します。<br>
 Terraform では、このtfstateファイルとHCL(*.tf)で記述されたコードの内容に差分があれば、それに応じて、その差分のみを更新するように振る舞います。<br>
 
@@ -27,6 +28,7 @@ Terraform では、このtfstateファイルとHCL(*.tf)で記述されたコ
 以上の問題から、backendリソースを使用して、tfstateファイルを外部のストレージに保存します。ここでは、AWSを使用するため、S3(tfstateファイルの保存、暗号化)+DynamoDB(State Locking)をbackendに指定します。S3のバケットはバージョニング設定ができるため、より安全な管理が行えます。<br>
 
 ## Terraform backend の管理
+
 Terraform backend は、`terraform init`時に必要となります。その為、Terraform で管理するには、AWS上に事前に作成しておき、Terraform にimportする方法が考えられます。また、外部ストレージとなるS3をTerraform で管理しているAWSアカウント上で管理することが考えられますが、公式では推奨していません。[^1]<br>
 後者については、別のAWSアカウントでTerraform backend を管理することが考えられますが、前者については、Terraform で管理すると、Terraform backend を管理するための Terraform の Terraform backend について考えなければならなくなり、堂々巡りに陥ってしまったので、CloudFormation を使用して管理することにしました。
 

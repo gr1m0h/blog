@@ -3,10 +3,9 @@
     "preset-ja-technical-writing": {
       "sentence-length": false,
       "max-comma": false,
-      "max-ten": {
-        max: 3
-      },
+      "max-ten": false,
       "max-kanji-continuous-len": false,
+      "no-doubled-joshi": false,
       "no-exclamation-question-mark": false,
       "ja-no-weak-phrase": false
     }

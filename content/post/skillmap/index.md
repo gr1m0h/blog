@@ -62,7 +62,7 @@ draft: false
 
 ## スキルマップ
 
-作成したスキルマップのテンプレートは以下です
+作成したスキルマップのテンプレートは以下です。
 
 * <https://docs.google.com/spreadsheets/d/1U1PFnvtSj_PaF89XMyg6AljB79FNtl9mm8DhuvfMeUg/edit?usp=sharing>
 

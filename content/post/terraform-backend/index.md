@@ -11,7 +11,7 @@ draft: false
 ## Terraform backend について
 
 Terraform は、構成要素の状態を保存するために、tfstateファイルを生成します。<br>
-Terraform では、このtfstateファイルとHCL(*.tf)で記述されたコードの内容に差分があれば、それに応じて、その差分のみを更新するように振る舞います。<br>
+Terraform では、このtfstateファイルとHCL(*.tf)で記述されたコードの内容に差分があれば、それに応じて、その差分のみを更新するように振る舞います。<br>
 
 このtfstateファイルは、バージョン管理システム(e.g. Github)で保存することは良くないとされています。それは、以下の理由からです。
 
@@ -34,6 +34,6 @@ Terraform backend は、`terraform init`時に必要となります。その為�
 
 [grimoh/terraform-backend-setup-scripts](https://github.com/grimoh/terraform-backend-setup-scripts)
 
-上記のスクリプトを使用すれば、CloudFormationスタック名、S3バケット名、DynamoDBテーブル名を指定することで、Terraform backend 用のS3、DynamoDBを作成することができます。
+上記のスクリプトを使用すれば、CloudFormationスタック名、S3バケット名、DynamoDBテーブル名を指定することで、Terraform backend 用のS3、DynamoDBを作成できます。
 
 [^1]: https://www.terraform.io/docs/backends/types/s3.html

@@ -1,0 +1,31 @@
+name: main
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache node_modules
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/yarn
+        key: ${{ runner.os }}-blog
+
+    - name: Install node_modules
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install
+      
+    - name: Run markdownlint
+      run: yarn check:lint:md
+        
+    - name: Run markdown-link-check
+      run: yarn check:lint
+        

@@ -22,10 +22,10 @@ jobs:
     - name: Install node_modules
       if: steps.cache.outputs.cache-hit != 'true'
       run: yarn install
-      
+
     - name: Run markdownlint
       run: yarn check:lint:md
-        
+
     - name: Run markdown-link-check
-      run: yarn check:lint
-        
+      run: yarn check:link
+

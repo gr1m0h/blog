@@ -91,7 +91,7 @@ Hugoを使用しているので、適用箇所は`contentフォルダ内のmarkd
 
 [.github/workflows/main.yml](https://github.com/grimoh/blog/blob/master/.github/workflows/main.yml)は以下のように設定しています。
 
-```yaml
+```sh
 name: main
 
 on:

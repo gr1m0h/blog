@@ -9,6 +9,7 @@
     "check:link": "find ./content -type f -name '*.md' -exec npx markdown-link-check {} \\;"
   },
   "dependencies": {
+    "markdown-link-check": "^3.8.1",
     "markdownlint": "^0.20.1",
     "markdownlint-cli": "^0.22.0",
     "textlint": "^11.6.3",

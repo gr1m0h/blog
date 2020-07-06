@@ -205,11 +205,11 @@ spec:
 ```
 
 Network Policyを有効化するためにアクセス制御したい対象のPodと同じNamespaceにNetworkPolicyリソースを作成し、アクセス制御ルールを定義します。アクセス制御したい対象のPodは`spec.podSelector.matchLabels`にて、対象のPodをラベルセレクトします。<br>
-`spec.policyTypes`では、このnetworkPolicyリソースで扱うルールを選択します。ルールには、Ingress(インバウンドのトラフィック)とEgress(アウトバウンドのトラフィック)に関するルールが定義できます。<br>
+`spec.policyTypes`では、このNetworkPolicyリソースで扱うルールを選択します。ルールには、Ingress(インバウンドのトラフィック)とEgress(アウトバウンドのトラフィック)に関するルールが定義できます。<br>
 Ingress、Egressそれぞれのルールの定義については、`spec.ingress`、`spec.egress`に設定します。Ingress、Egress共にfrom、toの違いはありますが、設定方法は同じです。from/toにて対象を指定し、portsにて対象のportとプロトコルを指定します。<br>
 from/toで使用される対象の指定方法には以下３つがあります。
 
-| Policy type | target |
+| policy type | target |
 |:-|:-|
 | podSelector | 特定のPodが対象 |
 | namespaceSelector | 特定のNamespaceが対象 |
@@ -225,7 +225,6 @@ from/toで使用される対象の指定方法には以下３つがあります�
   kind: NetworkPolicy
   metadata:
     name: network-policy
-    namespace: default
   spec:
     podSelector: {}
     policyTypes:
@@ -237,7 +236,7 @@ from/toで使用される対象の指定方法には以下３つがあります�
     - {}
   ```
 
-* 全てのIngress/Egressルールを許可
+* 全てのIngress/Egressルールを遮断
 
   ```sh
   $ cat network-policy.yaml
@@ -245,26 +244,19 @@ from/toで使用される対象の指定方法には以下３つがあります�
   kind: NetworkPolicy
   metadata:
     name: network-policy
-    namespace: default
   spec:
     podSelector: {}
     policyTypes:
     - Ingress
     - Egress
-    ingress:
-    - {}
-    egress:
-    - {}
   ```
 
 ---
 
 Network Policyについて簡単なテストを行っていきます。<br>
-Namespaceが全て違うA, B, Cというアプリがある状態で、Bに対してNetwork Policyを適用し、A => Bへの接続を拒否し、C => Bへの接続を許可するということをやってみたいと思います。また、podSelector、namespaceSelectorを使用してみたいので、Cが属するNamespaceには、Namespace自体にもlabelを付与します。<br>
+Namespaceが違うA, B, Cというアプリがある状態で、Bに対してNetwork Policyを適用し、A => Bへの接続を拒否し、C => Bへの接続を許可するということをやってみたいと思います。また、podSelector、namespaceSelectorを使用してみたいので、Cが属するNamespaceには、Namespace自体にもlabelを付与します。<br>
 
-まず、[テスト用に作成したServer](https://github.com/grimoh/test-server)をKubernetesに適用します。
-このServerは`test-server`というnamespaceに作成され、labalとしては`app: test-server`が付与されいています。このServerをBとします。<br>
-次に、以下Manifestを適用して、AとCをそれぞれ`test1`、`test2`というnamespaceに作成し、labelについても`app: test1`、`app: test2`と設定します。
+以下Manifestを適用して、`test-a`、`test-b`、`test-c`というNamespaceを作成し、それぞれ`test-pod-a`、`test-pod-b`、`test-pod-c`というPodを起動します。また、labelについても`app: test-a`、`app: test-b`、`app: test-c`と設定します。
 
 ```sh
 $ cat test-pods.yaml
@@ -376,14 +368,14 @@ spec:
 
 ```sh
 # A => B
-$ kubectl -n test-a exec -it test-pod-a -- wget -T 3 10.244.110.130
-Connecting to 10.244.110.130 (10.244.110.130:80)
+$ kubectl -n test-a exec -it test-pod-a -- wget -T 3 10.244.110.131
+Connecting to 10.244.110.131 (10.244.110.131:80)
 wget: download timed out
 command terminated with exit code 1
 
 # C => B
-$ kubectl -n test-c exec -it test-pod-c -- wget -T 3 10.244.110.130
-Connecting to 10.244.110.130 (10.244.110.130:80)
+$ kubectl -n test-c exec -it test-pod-c -- wget -T 3 10.244.110.131
+Connecting to 10.244.110.131 (10.244.110.131:80)
 index.html           100% |**************************************************|   612   0:00:00 ETA
 
 # A => C

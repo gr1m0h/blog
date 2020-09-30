@@ -1,8 +1,8 @@
 ---
 title: 2020年9月「見た映画読んだ本」
-description: 2020年9月に見た映画と読んだ本まとめです
-date: 2020-09-30T22:03:23+09:00
-lastmod: 2020-09-30T22:03:23+09:00
+description: 2020年9月に見た映画と読んだ本です。
+date: 2020-09-30T12:03:23+09:00
+lastmod: 2020-09-30T12:03:23+09:00
 tags: ["movie", "book"]
 categories: ["life"]
 draft: false

@@ -2,9 +2,8 @@
 title: Kubernetes Network Policy を kind で遊んでみた
 description:
 date: 2020-07-05T22:03:23+09:00
-lastmod: 2020-07-05T22:03:23+09:00
-tags: ["kubernetes"]
-categories: ["tech"]
+tags: [kubernetes]
+categories: [tech]
 draft: false
 ---
 
@@ -43,7 +42,7 @@ $ kind create cluster --config kind-config.yaml
 構築が完了し、KUBECONFIGを設定した後、Kubernetes Cluster内のPodの状態を確認してみます。
 CNIを無効にしているため、CoreDNSがPendingになっていることが分かると思います。
 
-```sh
+```
 $ kubectl get pods --all-namespaces
 NAMESPACE     NAME                                         READY   STATUS    RESTARTS   AGE
 kube-system   coredns-5c98db65d4-9zb27                     0/1     Pending   0          8m42s
@@ -61,7 +60,7 @@ kube-system   kube-scheduler-kind-control-plane            1/1     Running   0  
 
 次に、このKubernetes Clusterに割り当てられたCIDR範囲を確認します。
 
-```sh
+```
 $ kubectl cluster-info dump | grep -- --cluster-cidr
                             "--cluster-cidr=10.244.0.0/16",
 ```
@@ -70,13 +69,13 @@ $ kubectl cluster-info dump | grep -- --cluster-cidr
 CalicoはNetwork Policyに対応しているネットワークプラグインです。
 CIDR範囲をKubernetes Clusterに割り当てられたものと合わせるため、calico.yamlの`CALICO_IPV4POOL_CIDRO`を変更します。
 
-```sh
+```
 $ curl -s https://docs.projectcalico.org/v3.11/manifests/calico.yaml | sed 's,192.168.0.0/16,10.244.0.0/16,' > calico.yaml
 ```
 
 CalicoをKubernetes Clusterに適用します。
 
-```sh
+```
 $ kubectl apply -f calico.yaml
 configmap/calico-config created
 customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
@@ -106,7 +105,7 @@ serviceaccount/calico-kube-controllers created
 Calicoを適用した後、Kubernetes Cluster内のPodの状態を再度確認してみます。
 CNIが有効化されたため、CalicoのPodとCoreDNSのPodがRunningになっていることが確認できると思います。
 
-```sh
+```
 $ kubectl get pods --all-namespaces
 NAMESPACE     NAME                                         READY   STATUS    RESTARTS   AGE
 kube-system   calico-kube-controllers-758d7b8fd-trwb5      1/1     Running   0          14m
@@ -129,7 +128,7 @@ kube-system   kube-scheduler-kind-control-plane            1/1     Running   0  
 しかし、calico-nodeというDaemonSetが再起動を繰り返し、Readyになっていません。<br>
 同じ問題を抱えている[issue:installing calico requires a change to net.ipv4.conf.all.rp_filter](https://github.com/kubernetes-sigs/kind/issues/891)があったので、issue内に記載がある通りcalico-nodeのPodの`FELIX_IGNORELOOSERPF`という環境変数をtrueに変更します。
 
-```sh
+```
 $ kubectl -n kube-system set env daemonset/calico-node FELIX_IGNORELOOSERPF=true
 
 daemonset.extensions/calico-node env updated
@@ -137,7 +136,7 @@ daemonset.extensions/calico-node env updated
 
 caloco-nodeが更新、再作成され、Readyになっていることを確認できました。
 
-```sh
+```
 $ kubectl get pods --all-namespaces
 NAMESPACE     NAME                                         READY   STATUS    RESTARTS   AGE
 kube-system   calico-kube-controllers-758d7b8fd-trwb5      1/1     Running   0          54m
@@ -166,7 +165,7 @@ kube-system   kube-scheduler-kind-control-plane            1/1     Running   0  
 
 まず、Network PolicyのManifest例を記載します。
 
-```sh
+```
 $ cat network-policy.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -219,7 +218,7 @@ from/toで使用される対象の指定方法には以下３つがあります�
 
 * 全てのIngress/Egressルールを許可
 
-  ```sh
+  ```
   $ cat network-policy.yaml
   apiVersion: networking.k8s.io/v1
   kind: NetworkPolicy
@@ -238,7 +237,7 @@ from/toで使用される対象の指定方法には以下３つがあります�
 
 * 全てのIngress/Egressルールを遮断
 
-  ```sh
+  ```
   $ cat network-policy.yaml
   apiVersion: networking.k8s.io/v1
   kind: NetworkPolicy
@@ -258,7 +257,7 @@ Namespaceが違うA, B, Cというアプリがある状態で、Bに対してNet
 
 以下Manifestを適用して、`test-a`、`test-b`、`test-c`というNamespaceを作成し、それぞれ`test-pod-a`、`test-pod-b`、`test-pod-c`というPodを起動します。また、labelについても`app: test-a`、`app: test-b`、`app: test-c`と設定します。
 
-```sh
+```
 $ cat test-pods.yaml
 apiVersion: v1
 kind: Namespace
@@ -321,7 +320,7 @@ spec:
 
 次に、作成されたA、B、CのPodのIPアドレスを確認します。
 
-```sh
+```
 $ kubectl get pods -o wide -n test-a
 NAME         READY   STATUS    RESTARTS   AGE     IP               NODE           NOMINATED NODE   READINESS GATES
 test-pod-a   1/1     Running   0          4m18s   10.244.195.194   kind-worker3   <none>           <none>
@@ -341,7 +340,7 @@ test-pod-c   1/1     Running   0          4m23s   10.244.162.131   kind-worker  
 
 次に、以下のNetworkPolicyを適用します。
 
-```sh
+```
 $ cat network-policy.yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -366,7 +365,7 @@ spec:
 
 この状態でA => B、C => B、A => Cへの接続を試してみます。
 
-```sh
+```
 # A => B
 $ kubectl -n test-a exec -it test-pod-a -- wget -T 3 10.244.110.131
 Connecting to 10.244.110.131 (10.244.110.131:80)

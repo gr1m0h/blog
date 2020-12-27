@@ -1,6 +1,5 @@
 ---
 title: About
-description:
 draft: false
 ---
 
@@ -9,4 +8,4 @@ I love Music(Punk, Rock, Hardcore and Visual-kei), Movie(Horror, Action and SF),
 
 My skills are Kubernetes, Azure(AKS, Active Directory, ..., Basic Skills), AWS(EKS, IAM, ..., Basic Skills), Terraform, Go, Load Testing Tools(JMeter, k6.cloud, Vegeta, autocannon).
 
-My interesting things are SRE, Production Ready, Capacity Planning, Load Testing, Monitoring.
+My interesting things are SRE, Production Ready, Capacity Planning, Load Testing, Monitoring and Security.

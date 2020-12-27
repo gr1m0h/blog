@@ -4,63 +4,71 @@ theme = "hugo-ink"
 copyright = "© Copyright 2020 grimoh"
 languageCode = "eu-us"
 hasCJKLanguage = true
-paginate = 5
-
-pygmentsstyle = "dracula"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+paginate = 6
 
 googleAnalytics = "UA-137907582-1"
 disqusShortname = ""
 
+[[markup.highlight]]
+  anchorLineNos = false
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineAnchors = ""
+  lineNoStart = 
+  lineNos = true
+  lineNumbersInTable = true
+  noClasses = true
+  style = "dracula"
+
 [params]
-	subtitle = "I'm a SRE as well as a Vampire. 🦇 ☔️ 🦄 🐰"
-	# Optional 64x64 avatar image.
-	avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
-	featherIconsCDN = true
-	mode = "dark"
+  subtitle = "I'm a SRE as well as a Vampire. 🦇 ☔️ 🦄 🐰"
+  # Optional 64x64 avatar image.
+  avatar = "https://image.freepik.com/free-vector/young-man-head-with-beard-avatar-character_24877-36786.jpg"
+  featherIconsCDN = true
+  mode = "auto" # auto or dark
 
 # Nav.
 [[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
+  name = "Home"
+  url = "/"
+  weight = 1
 
 [[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
+  name = "All posts"
+  url = "/posts"
+  weight = 2
 
 [[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
+  name = "About"
+  url = "/about"
+  weight = 3
 
 [[menu.main]]
-name = "Categories"
-url = "/categories"
-weight = 4
+  name = "Categories"
+  url = "/categories"
+  weight = 4
 
 [[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 5
+  name = "Tags"
+  url = "/tags"
+  weight = 5
 
 [[params.social]]
-name = "Github"
-icon = "github"
-url = "https://github.com/grimoh"
+  name = "Github"
+  icon = "github"
+  url = "https://github.com/grimoh"
 
 [[params.social]]
-name = "Twitter"
-icon = "twitter"
-url = "https://twitter.com/grim0h"
+  name = "Twitter"
+  icon = "twitter"
+  url = "https://twitter.com/grim0h"
 
 [[params.social]]
-name = "RSS"
-icon = "rss"
-url = "/index.xml"
+  name = "RSS"
+  icon = "rss"
+  url = "/index.xml"
 
 [taxonomies]
-	tag = "tags"
-	category = "categories"
+  tag = "tags"
+  category = "categories"

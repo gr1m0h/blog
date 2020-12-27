@@ -2,7 +2,6 @@
 title: Github Actionsでブログのlintチェックしてみた
 description: Github Actionsでブログのlintチェックを導入してみたお話
 date: 2020-04-28T22:03:23+09:00
-lastmod: 2020-04-28T22:03:23+09:00
 tags: ["blog", "ci/cd"]
 categories: ["tech"]
 draft: false
@@ -91,7 +90,7 @@ Hugoを使用しているので、適用箇所は`contentフォルダ内のmarkd
 
 [.github/workflows/main.yml](https://github.com/grimoh/blog/blob/master/.github/workflows/main.yml)は以下のように設定しています。
 
-```sh
+```yaml
 name: main
 
 on:
@@ -131,4 +130,3 @@ jobs:
 
 Github Actionsでブログのlintチェックを導入してみました。
 複数人でドキュメント運用するとルールの締め付けが心配になる今日この頃ですが、個人ブログだと都合のいいように設定していけるので、実験の場として色々試していきたいです。
-デウス・エクス・マキナが許される世界。

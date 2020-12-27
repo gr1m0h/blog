@@ -1,9 +1,7 @@
 ---
 title: 個人活動におけるスキルマップのすすめ
 description: 組織ではなく個人活動にスキルマップを導入した話
-date: 2019-10-21
 date: 2019-10-21T22:03:23+09:00
-lastmod: 2020-02-01T22:03:23+09:00
 tags: []
 categories: ["tech"]
 draft: false

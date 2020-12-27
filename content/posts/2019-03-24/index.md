@@ -1,9 +1,7 @@
 ---
 title: First post
 description:
-date: 2019-03-24
 date: 2019-03-24T22:03:23+09:00
-lastmod: 2020-02-01T22:03:23+09:00
 tags: ["blog"]
 categories: ["tech"]
 draft: false

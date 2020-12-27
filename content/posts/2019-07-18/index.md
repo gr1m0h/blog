@@ -1,9 +1,7 @@
 ---
 title: asdf-vm を使用したバージョン管理
 description: asdf-vm(asdf version manager)を使用したバージョン管理について紹介します
-date: 2019-07-18
 date: 2019-07-18T22:03:23+09:00
-lastmod: 2020-02-01T22:03:23+09:00
 tags: ["asdf-vm"]
 categories: ["tech"]
 draft: false
@@ -29,11 +27,11 @@ asdf-vmの使い方について簡単に説明します。
 
 以下は、`Bash on macOS` の場合です。
 
-```sh
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
+```fish
+$ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.3
 
-echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
-echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
+$ echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bash_profile
+$ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
 ```
 
 個人的な[dotfiles](https://github.com/grimoh117/dotfiles)にもasdf-vmを導入する手順が含まれているので、参考にしてみても良いかもしれません。
@@ -43,8 +41,8 @@ echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bash_profile
 ここからは、↑で紹介したloadimpact/k6を例にして紹介します。<br>
 loadimpact/k6のプラグインを追加します。
 
-```sh
-asdf plugin-add k6 https://github.com/grimoh117/asdf-k6.git
+```fish
+$ asdf plugin-add k6 https://github.com/grimoh117/asdf-k6.git
 ```
 
 公式のプラグインの場合、インストールもとのURLが不要となります。
@@ -53,8 +51,8 @@ asdf plugin-add k6 https://github.com/grimoh117/asdf-k6.git
 
 loadimpact/k6のプラグインをアンインストールします。
 
-```sh
-asdf plugin-remove k6
+```fish
+$ asdf plugin-remove k6
 ```
 
 ### List all available versions
@@ -62,8 +60,8 @@ asdf plugin-remove k6
 loadimpact/k6のプラグインを使用してインストール可能なバージョンの一覧を表示します。<br>
 この中から使用するバージョンを選択し、インストールして使用します。
 
-```sh
-asdf list-all k6
+```fish
+$ asdf list-all k6
 ```
 
 ### Install version
@@ -71,32 +69,32 @@ asdf list-all k6
 loadimpact/k6の0.24.0をインストールしてみます。<br>
 インストールを行ってもパスが通っているわけでは無いので、使用することはできません。
 
-```sh
-asdf install k6 0.24.0
+```fish
+$ asdf install k6 0.24.0
 ```
 
 ### Uninstall version
 
 loadimpact/k6の0.24.0をアンインストールしてみます。
 
-```sh
-asdf uninstall k6 0.24.0
+```fish
+$ asdf uninstall k6 0.24.0
 ```
 
 ### Set current version
 
 global設定で全環境で使用するバージョンを固定します。
 
-```sh
-asdf global k6 0.24.0
+```fish
+$ asdf global k6 0.24.0
 ```
 
 このバージョンの指定を行うことで、使用できるようになります。
 
 local設定で今いるディレクトリ内で使用するバージョンを固定します。
 
-```sh
-asdf local k6 0.24.0
+```fish
+$ asdf local k6 0.24.0
 ```
 
 ## プラグインの作成

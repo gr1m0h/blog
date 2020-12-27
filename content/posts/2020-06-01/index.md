@@ -1,9 +1,7 @@
 ---
 title: Makeの変数における代入タイプについて
 description: Makefileに記述する変数における代入タイプの違いについて紹介します
-date: 2020-06-01
 date: 2020-06-01T22:03:23+09:00
-lastmod: 2020-06-01T22:03:23+09:00
 tags: ["make"]
 categories: ["tech"]
 draft: false
@@ -28,7 +26,7 @@ GNU makeにおける変数の代入タイプには、`:=, =, ?=, +=`等があり
 
 Makefile内で以下のように記述した場合、結果がどうなるか見ていきます。
 
-```sh
+```fish
 $ cat Makefile
 
 a := foo
@@ -42,7 +40,7 @@ test:
 
 出力結果は以下のようになります。
 
-```sh
+```fish
 $ make test
 baz
 foo bar
@@ -60,7 +58,7 @@ bの出力では、bに代入されたときの状態のままであるため、
 
 Makefile内で以下のように記述した場合、結果がどうなるか見ていきます。
 
-```sh
+```fish
 $ cat Makefile
 
 a = foo
@@ -74,7 +72,7 @@ test:
 
 出力結果は以下のようになります。
 
-```sh
+```fish
 $ make test
 baz
 baz bar
@@ -92,7 +90,7 @@ bの出力では、`:=`と違って「使用される度に右辺を再評価す
 
 Makefile内で以下のように記述した場合、結果がどうなるか見ていきます。
 
-```sh
+```fish
 $ cat Makefile
 
 a ?= foo
@@ -106,7 +104,7 @@ test:
 
 出力結果は以下のようになります。
 
-```sh
+```fish
 $ make test
 foo
 foo bar

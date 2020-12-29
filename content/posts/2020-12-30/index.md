@@ -1,7 +1,7 @@
 ---
 title: 2020年振り返り
 description:
-date: 2020-12-30T12:03:23+09:00
+date: 2020-12-30T02:03:23+09:00
 tags: []
 categories: ["life"]
 draft: false

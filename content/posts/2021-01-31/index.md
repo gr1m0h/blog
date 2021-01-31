@@ -18,6 +18,9 @@ draft: false
 * We Bare Bears: The Movie
 * Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)
 * Downton Abbey
+* 3年目のデビュー
+* Doctor Sleep
+* Hereditary
 
 ### ドラマ
 
@@ -29,6 +32,4 @@ draft: false
 
 ## 本
 
-### 雑誌
-
-* ミステリマガジン 2021年1月号 「ミステリが読みたい! 2021年版」
+* ボビー・フィッシャーのチェス入門

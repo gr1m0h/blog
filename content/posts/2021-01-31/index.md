@@ -1,6 +1,6 @@
 ---
 title: 2021年1月「見た映画読んだ本」
-description: 2021年1月に見た映画と読んだ本です。
+description: 2021年1月に見た映画と読んだ本
 date: 2021-01-31T12:03:23+09:00
 tags: ["movie", "book"]
 categories: ["life"]

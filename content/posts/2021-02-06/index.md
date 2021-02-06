@@ -1,6 +1,6 @@
 ---
 title: チェスのはじめかた
-description:
+description: チェスのルールについて説明
 date: 2021-02-06T12:03:23+09:00
 tags: ["chess"]
 categories: ["life"]

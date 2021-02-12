@@ -19,6 +19,7 @@ draft: false
 * We Can Be Heroes
 * My Girl
 * Doctor Sleep
+* 劇場版 のんのんびより ばけーしょん
 
 ### ドラマ
 
@@ -26,6 +27,8 @@ draft: false
 ### アニメ
 
 * South Park season 23
+* のんのんびより
+* のんのんびより りぴーと
 
 ## 本
 

@@ -20,6 +20,7 @@ draft: false
 * My Girl
 * Doctor Sleep
 * 劇場版 のんのんびより ばけーしょん
+* Dracula -1931-
 
 ### ドラマ
 

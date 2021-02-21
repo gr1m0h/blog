@@ -25,6 +25,7 @@ draft: false
 ### ドラマ
 
 * The Baby-Sitters Club season 1
+* The Shining
 
 ### アニメ
 

@@ -18,6 +18,7 @@ draft: false
 * ガールズ&パンツァー劇場版
 * ガールズ&パンツァー最終章 第1話
 * ガールズ&パンツァー最終章 第2話
+* Tom and Jerry
 
 ### ドラマ
 
@@ -27,5 +28,12 @@ draft: false
 * ガールズ&パンツァー
 * NEW GAME !
 * NEW GAME !
+* のんのんびよりのんすとっぷ
+* DC Super Hero Girls season 1
+* はたらく細胞!!
+* はたらく細胞BLACK
 
 ## 本
+
+* チェス 定跡と戦い方
+* 怪人二十面相

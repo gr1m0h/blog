@@ -1,6 +1,6 @@
 ---
 title: Makeの変数における代入タイプについて
-description: Makefileに記述する変数における代入タイプの違いについて紹介します
+description:
 date: 2020-06-01T22:03:23+09:00
 tags: ["make"]
 categories: ["tech"]

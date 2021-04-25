@@ -1,6 +1,6 @@
 ---
 title: asdf-vm を使用したバージョン管理
-description: asdf-vm(asdf version manager)を使用したバージョン管理について紹介します
+description:
 date: 2019-07-18T22:03:23+09:00
 tags: ["asdf-vm"]
 categories: ["tech"]

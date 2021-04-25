@@ -1,6 +1,6 @@
 ---
 title: Github Actionsでブログのlintチェックしてみた
-description: Github Actionsでブログのlintチェックを導入してみたお話
+description:
 date: 2020-04-28T22:03:23+09:00
 tags: ["blog", "ci/cd"]
 categories: ["tech"]

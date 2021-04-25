@@ -1,6 +1,6 @@
 ---
 title: "Terraform backend の管理"
-description: Terraform backend を S3(+DynamoDB) で作成した時の管理について紹介します
+description:
 date: 2019-10-06T22:03:23+09:00
 tags: ["Terraform", "AWS"]
 categories: ["tech"]

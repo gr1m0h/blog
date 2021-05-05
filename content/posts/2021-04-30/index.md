@@ -20,6 +20,11 @@ draft: false
 * Yes Day
 * And Then There Were None -1945-
 
+### アニメ
+
+* My Hero Academia Season 1
+* My Hero Academia Season 2
+
 ## 本
 
 * ミステリマガジン 2021年5月号 「特殊設定ミステリの楽しみ方」

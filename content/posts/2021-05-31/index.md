@@ -13,10 +13,16 @@ draft: false
 
 ### 映画
 
+* The Michells vs. The Machines
+
 ### アニメ
 
 * My Hero Academia Season 3
 * My Hero Academia Season 4
+* Love, Death & Robots Season 1
+* Love, Death & Robots Season 2
 
 ## 本
 
+* チェス上達の手引き I.A.ホロウィッツ&フレッド・ラインフェルド(訳 水野優)
+* チェス戦略大全I 駒の活用法 ルディックパッハマン(訳 小笠誠一)

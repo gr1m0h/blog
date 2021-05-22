@@ -14,6 +14,13 @@ draft: false
 ### 映画
 
 * The Michells vs. The Machines
+* The Willoughbys
+* Love and Monsters
+
+### ドラマ
+
+* Queen's Gambit
+* Creating The Queen's Gambit
 
 ### アニメ
 

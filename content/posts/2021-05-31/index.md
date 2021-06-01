@@ -28,6 +28,17 @@ draft: false
 * My Hero Academia Season 4
 * Love, Death & Robots Season 1
 * Love, Death & Robots Season 2
+* Classroom of the Elite
+* とらドラ!
+* 五等分の花嫁 Season 1
+* 五等分の花嫁 Season 2
+* 可愛ければ変態でも好きになってくれますか？
+* なんでここに先生が!?
+* からかい上手の高木さん Season 1
+* からかい上手の高木さん Season 2
+* きんいろモザイク Season 1
+* この素晴らしい世界に祝福を! Season 1
+* この素晴らしい世界に祝福を! Season 2
 
 ## 本
 

@@ -39,6 +39,10 @@ draft: false
 * きんいろモザイク Season 1
 * この素晴らしい世界に祝福を! Season 1
 * この素晴らしい世界に祝福を! Season 2
+* 生徒会役員共 Season 1
+* 生徒会役員共 Season 2
+* 生徒会役員共 OVA 1
+* 生徒会役員共 OVA 2
 
 ## 本
 

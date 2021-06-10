@@ -22,7 +22,7 @@ draft: false
 
 * ガールズ&パンツァー
 * NEW GAME !
-* NEW GAME !
+* NEW GAME !!
 * のんのんびよりのんすとっぷ
 * DC Super Hero Girls season 1
 * はたらく細胞!!

@@ -14,6 +14,7 @@ draft: false
 ### 映画
 
 * 劇場版 幼女戦記
+* The Strange House
 
 ### アニメ
 

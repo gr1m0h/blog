@@ -1,7 +1,7 @@
 baseurl = "https://blog.grimoh.net/"
 title = "Grimoh's Blog"
 theme = "hugo-ink"
-copyright = "© Copyright 2020 grimoh"
+copyright = "© Copyright 2021 grimoh"
 languageCode = "eu-us"
 hasCJKLanguage = true
 paginate = 6
@@ -15,7 +15,7 @@ disqusShortname = ""
     style = "dracula"
 
 [params]
-  subtitle = "I'm a SRE as well as a Vampire. 🦇 ☔️ 🦄 🐰"
+  subtitle = "I'm a SRE, SWE and Chess Player."
   # Optional 64x64 avatar image.
   avatar = "https://ja.gravatar.com/userimage/188099485/9702e68c91df130bec08603c78c641e3.png"
   featherIconsCDN = true

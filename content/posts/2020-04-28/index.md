@@ -43,7 +43,6 @@ Github ActionsとはGithubに組み込まれているCI, CDワークフローを
 
 .markdownlintrc.jsonにルールの記述をしています。
 
-* [.markdownlintrc.json](https://github.com/grimoh/blog/blob/master/.markdownlintrc.json)
 
 markdownlintの設定値については[ここ](https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md)に記載があります。
 
@@ -60,8 +59,6 @@ markdownlintの設定値については[ここ](https://github.com/DavidAnson/ma
 
 .textlintrc内にルールの記載をしています。
 
-* [.textlintrc](https://github.com/grimoh/blog/blob/master/.textlintrc)
-
 textlint-rule-preset-ja -technical-writingの設定値については[ここ](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing#%E3%83%AB%E3%83%BC%E3%83%AB%E4%B8%80%E8%A6%A7)に記載があります。
 
 ## 実現方法
@@ -72,23 +69,9 @@ textlint-rule-preset-ja -technical-writingの設定値については[ここ](ht
 1. package.jsonにスクリプトを記述
 1. Github Actionsから記述したスクリプトを実行
 
-### スクリプト設定内容について
-
-[package.json](https://github.com/grimoh/blog/blob/master/package.json)内のscriptsは以下のように設定しています。
-
-```json
-  "fix:lint:md": "find ./content -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json --fix {} \\;",
-  "check:lint:md": "find ./content -type f -name '*.md' -exec npx markdownlint --config .markdownlintrc.json {} \\;",
-  "fix:lint:text": "find ./content -type f -name '*.md' -exec npx textlint --fix {} \\;",
-  "check:lint:text": "find ./content -type f -name '*.md' -exec npx textlint {} \\;",
-  "check:link": "find ./content -type f -name '*.md' -exec npx markdown-link-check {} \\;"
-```
-
-Hugoを使用しているので、適用箇所は`contentフォルダ内のmarkdownファイル`のみを想定しています。そのため、findコマンドを使用し、`./content`、`*.md`を指定しています。
-
 ### Github Actions 設定内容について
 
-[.github/workflows/main.yml](https://github.com/grimoh/blog/blob/master/.github/workflows/main.yml)は以下のように設定しています。
+.github/workflows/main.ymlは以下のように設定しています。
 
 ```yaml
 name: main
